@@ -21,7 +21,9 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { Avatar, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { grey } from "@mui/material/colors";
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -106,6 +108,7 @@ const Array3 = [
 export default function SideBar({ open, handleDrawerClose }) {
   const theme = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <Drawer variant="permanent" open={open}>
@@ -162,6 +165,12 @@ export default function SideBar({ open, handleDrawerClose }) {
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor:
+                  location.pathname === item.path
+                    ? theme.palette.mode === "dark"
+                      ? grey[900]
+                      : grey[300]
+                    : null,
               }}
             >
               <ListItemIcon
@@ -193,6 +202,12 @@ export default function SideBar({ open, handleDrawerClose }) {
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor:
+                  location.pathname === item.path
+                    ? theme.palette.mode === "dark"
+                      ? grey[900]
+                      : grey[300]
+                    : null,
               }}
             >
               <ListItemIcon
@@ -224,6 +239,12 @@ export default function SideBar({ open, handleDrawerClose }) {
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor:
+                  location.pathname === item.path
+                    ? theme.palette.mode === "dark"
+                      ? grey[900]
+                      : grey[300]
+                    : null,
               }}
             >
               <ListItemIcon
