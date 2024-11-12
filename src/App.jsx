@@ -39,7 +39,9 @@ export default function MiniDrawer() {
         />
         <SideBar open={open} handleDrawerClose={handleDrawerClose} />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-          <Typography sx={{ marginBottom: 2 }}>Ahmed Hasssssssssssssssssssshim</Typography>
+          <Typography sx={{ marginBottom: 2 }}>
+            Ahmed Hasssssssssssssssssssshim
+          </Typography>
         </Box>
       </Box>
     </ThemeProvider>
