@@ -18,7 +18,7 @@ import Faq from "./pages/faq/Faq";
 import BarChart from "./pages/barChart/BarChart";
 import PieChart from "./pages/pieChart/PieChart";
 import LineChart from "./pages/lineChart/LineChart";
-import Geography from "./pages/geography/Geography";
+import GeographyChart from "./pages/geography/GeographyChart";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,7 +33,7 @@ const router = createBrowserRouter(
       <Route path="bar" element={<BarChart />} />
       <Route path="pie" element={<PieChart />} />
       <Route path="line" element={<LineChart />} />
-      <Route path="geography" element={<Geography />} />
+      <Route path="geography" element={<GeographyChart />} />
     </Route>
   )
 );

@@ -226,6 +226,7 @@ export default function Line() {
     <Box sx={{ height: "75vh" }}>
       <ResponsiveLine
         theme={{
+          // @ts-ignore
           textColor: theme.palette.text.primary,
           fontSize: 11,
           axis: {
@@ -330,6 +331,7 @@ export default function Line() {
           reverse: false,
         }}
         yFormat=" >-.2f"
+        curve="catmullRom"
         axisTop={null}
         axisRight={null}
         axisBottom={{
