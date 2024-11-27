@@ -220,10 +220,10 @@ const data = [
   },
 ];
 
-export default function Line() {
+export default function Line(isDashboard = false) {
   const theme = useTheme();
   return (
-    <Box sx={{ height: "75vh" }}>
+    <Box sx={{ height: isDashboard ? "280px" : "75vh" }}>
       <ResponsiveLine
         theme={{
           // @ts-ignore
@@ -338,7 +338,7 @@ export default function Line() {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "transportation",
+          legend: isDashboard ? null : "transportation",
           legendOffset: 36,
           legendPosition: "middle",
           truncateTickAt: 0,
@@ -347,7 +347,7 @@ export default function Line() {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "count",
+          legend: isDashboard ? null : "count",
           legendOffset: -40,
           legendPosition: "middle",
           truncateTickAt: 0,

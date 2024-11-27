@@ -18,6 +18,7 @@ export default function Card({
   return (
     <Paper
       sx={{
+        flexGrow: 1,
         minWidth: "333px",
         display: "flex",
         justifyContent: "space-between",
