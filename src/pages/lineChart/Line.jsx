@@ -220,7 +220,8 @@ const data = [
   },
 ];
 
-export default function Line(isDashboard = false) {
+// eslint-disable-next-line react/prop-types
+export default function Line({ isDashboard = false }) {
   const theme = useTheme();
   return (
     <Box sx={{ height: isDashboard ? "280px" : "75vh" }}>
