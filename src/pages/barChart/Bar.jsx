@@ -38,10 +38,11 @@ const data = [
   },
 ];
 
-export default function Bar() {
+// eslint-disable-next-line react/prop-types
+export default function Bar({ isDashboard = false }) {
   const theme = useTheme();
   return (
-    <Box sx={{ height: "75vh" }}>
+    <Box sx={{ height: isDashboard ? "400px" : "75vh" }}>
       <ResponsiveBar
         theme={{
           text: {
@@ -204,7 +205,7 @@ export default function Bar() {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Year",
+          legend: isDashboard ? null : "Year",
           legendPosition: "middle",
           legendOffset: 35,
           truncateTickAt: 0,
@@ -213,7 +214,7 @@ export default function Bar() {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "salary/month",
+          legend: isDashboard ? null : "salary/month",
           legendPosition: "middle",
           legendOffset: -50,
           truncateTickAt: 0,
